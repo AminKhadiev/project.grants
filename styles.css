@@ -1,0 +1,236 @@
+/* Общие стили */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background: radial-gradient(circle at top left, #2F3C7E, #0D1A31);
+  color: #EEE;
+  animation: starfield 30s infinite linear;
+}
+
+/* Анимация звездного поля */
+@keyframes starfield {
+  from {background-position: 0% 50%}
+  to   {background-position: 100% 50%}
+}
+
+/* Анимированные звезды */
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: white;
+  animation-name: fall;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+}
+
+@keyframes fall {
+  0% {top: -10%; opacity: 0;}
+  50% {opacity: 1;}
+  100% {bottom: -10%; opacity: 0;}
+}
+
+.star:nth-child(1) {left: 10%; animation-delay: 0s;}
+.star:nth-child(2) {left: 20%; animation-delay: 1s;}
+.star:nth-child(3) {left: 30%; animation-delay: 2s;}
+.star:nth-child(4) {left: 40%; animation-delay: 3s;}
+.star:nth-child(5) {left: 50%; animation-delay: 4s;}
+.star:nth-child(6) {left: 60%; animation-delay: 5s;}
+.star:nth-child(7) {left: 70%; animation-delay: 6s;}
+.star:nth-child(8) {left: 80%; animation-delay: 7s;}
+.star:nth-child(9) {left: 90%; animation-delay: 8s;}
+.star:nth-child(10){left: 100%; animation-delay: 9s;}
+
+/* Шапка */
+header {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  text-align: center;
+}
+header h1 {
+  margin: 0;
+  font-size: 2em;
+  color: #EEE;
+}
+nav {
+  margin-top: 10px;
+}
+nav a {
+  text-decoration: none;
+  margin: 0 15px;
+  color: #DDD;
+  font-weight: bold;
+}
+nav a:hover {
+  color: #FFF;
+}
+
+/* Основные разделы */
+section {
+  padding: 40px 20px;
+  text-align: center;
+}
+.intro h2 {
+  font-size: 2em;
+}
+.cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.card {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 20px;
+  width: 250px;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.3);
+}
+.btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #FFCC00;
+  color: #333;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+.btn:hover {
+  background-color: #FFD11A;
+}
+
+/* Команда */
+.team {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.member {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  margin: 10px;
+  padding: 20px;
+  width: 200px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+.member:hover {
+  transform: scale(1.05);
+}
+.member img {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+
+/* Подвал */
+footer {
+  background-color: rgba(255,255,255,0.1);
+  padding: 15px;
+  text-align: center;
+  margin-top: 40px;
+  font-size: 0.9em;
+}
+
+/* Проекты */
+.projects-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.project {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 15px;
+  width: 80%;
+  margin: 10px 0;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+.project h3 {
+  margin-top: 0;
+}
+.disabled {
+  background-color: rgba(100, 100, 100, 0.5);
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+/* Ваши базовые стилизации остаются прежними */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: radial-gradient(circle at top left, #2F3C7E, #0D1A31);
+  color: #EEE;
+}
+
+/* Гибкие контейнеры и элементы */
+.cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.card {
+  width: 250px;
+  max-width: 90%;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  
+}
+.logo-img {
+  width: 150px; /* Ширина логотипа */
+  height: 50px; /* Высота логотипа */
+}
+
+/* Отдельное изображение с заданными размерами */
+.custom-size-img {
+  width: 300px; /* Фиксированная ширина */
+  height: 200px; /* Фиксированная высота */
+}
+
+/* Общие правила отображения изображений */
+.photo-gallery img {
+  max-width: 100%;
+  height: auto;
+}
+/* Медиа-запросы для небольших экранов */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.5em;
+  }
+  nav {
+    display: flex;
+    flex-direction: column;
+  }
+  nav a {
+    margin: 10px 0;
+  }
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  .card {
+    width: 90%;
+  }
+  .team {
+    flex-direction: column;
+    align-items: center;
+  }
+  .member {
+    width: 90%;
+  }
+}
+
